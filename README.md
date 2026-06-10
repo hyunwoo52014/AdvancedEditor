@@ -19,10 +19,10 @@
 - JavaFxUI : JavaFx를 활용한 모듈, 앱을 사용하긴 위한 화면 렌더링, 프론트엔드
 - SpringModules : Spring Framework 프로젝트를 통해 앱의 기능을 구현하기 위한 모듈, 백그라운드
 - Main : main 메소드, Entry Point가 있는 모듈, POJO를 통한 독립적인 기능 구현도 해당 모듈에 기술
-
- ---
  
 # 3. 구현 목록
 - 파일 입출력
 - 파일 텍스트 편집
 - hex 데이터 편집
+
+---
