@@ -1,0 +1,64 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.hyunwoo52014.project</groupId>
+	<artifactId>AdvancedEditor</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<!-- Maven 프로젝트에서 사용할 전역 변수-->
+	<properties>
+		<java.target.version>25</java.target.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<spring.framework.version>7.0.7</spring.framework.version>
+		<javafx.version>26</javafx.version>
+	</properties>
+
+	<modules>
+		<module>JavaFxUI</module>
+		<module>SpringModules</module>
+		<module>Main</module>
+	</modules>
+
+	<!-- Maven 빌드 설정 정의 요소-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<source>${java.target.version}</source>
+					<target>${java.target.version}</target>
+					<release>${java.target.version}</release>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- Maven의 의존성 관리-->
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring 7 핵심 라이브러리 버전 가이드라인 수입 -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-framework-bom</artifactId>
+				<version>${spring.framework.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- JavaFX 라이브러리 버전 지정 -->
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-controls</artifactId>
+				<version>${javafx.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.openjfx</groupId>
+				<artifactId>javafx-graphics</artifactId>
+				<version>${javafx.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
