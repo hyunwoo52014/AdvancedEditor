@@ -6,7 +6,7 @@ target/
 
 # Maven Module
 **/target/
-
+**/.classpath
 # Eclipse
 .project
 .classpath
