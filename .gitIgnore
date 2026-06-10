@@ -1,0 +1,19 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+
+# Maven Module
+**/target/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
